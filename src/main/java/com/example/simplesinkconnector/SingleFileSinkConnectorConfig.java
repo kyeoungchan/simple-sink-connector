@@ -4,7 +4,7 @@ import java.util.Map;
 import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 
-public class SimpleFileSinkConnectorConfig extends AbstractConfig {
+public class SingleFileSinkConnectorConfig extends AbstractConfig {
 
     /* 토픽의 데이터를 저장할 파일 이름을 옵션값으로 받기 위해 선언한다.
     * 토픽이 옵션값에 없는 이류는 커넥트를 통해 커넥터를 생성할 때 기본값으로 받아야하기 때문이다.
@@ -22,7 +22,7 @@ public class SimpleFileSinkConnectorConfig extends AbstractConfig {
             DIR_FILE_NAME_DOC
     );
 
-    public SimpleFileSinkConnectorConfig(Map<String, String> props) {
+    public SingleFileSinkConnectorConfig(Map<String, String> props) {
         super(CONFIG, props);
     }
 }
